@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: graphql-java-tools-app
+server:
+  port: 8080
+graphql:
+    tools:
+        schema-location-pattern: "schema.graphqls"
+
+    servlet:
+#        mapping: /graphql
+#        enabled: true
+#        corsEnabled: false
+#        cors:
+#            allowed-origins: http://some.domain.com
+        # if you want to @ExceptionHandler annotation for custom GraphQLErrors
+        exception-handlers-enabled: true
+#        contextSetting: PER_REQUEST_WITH_INSTRUMENTATION
+
+        # enable tracing
+#        tracing-enabled: true
+graphiql:
+  headers:
+    Authorization: "Bearer 05bd9a5f3fe0408f89520946b0fe1b06"
+
+logging:
+  level:
+    root: INFO
+    com:
+      oembedler:
+        moon:
+          graphql:
+            boot:
+              error: debug
